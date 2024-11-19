@@ -107,7 +107,7 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
           }
         }}
         InputProps={{
-          inputProps: { min: 0, max: 100 },
+          inputProps: {min: 0, max: 100},
         }}
         placeholder="Например, от 10"
         fullWidth
@@ -125,7 +125,7 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
             handleChange('maxPrice', value[1]);
           }
         }}
-        sx={{ flex: 1 }}
+        sx={{flex: 1}}
       />
 
       <Box>
@@ -139,14 +139,13 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
                 handleChange('minPrice', value);
               }
             }}
-
             inputProps={{
               step: 100,
-              min: filters.minPrice,
+              min: 0,
               max: filters.maxPrice,
               type: 'number',
             }}
-            sx={{ width: '100px' }}
+            sx={{width: '100px'}}
           />
 
           <TextField
@@ -158,14 +157,13 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
                 handleChange('maxPrice', value);
               }
             }}
-
             inputProps={{
               step: 100,
               min: filters.minPrice,
-              max: filters.maxPrice,
+              max: 100500,
               type: 'number',
             }}
-            sx={{ width: '100px' }}
+            sx={{width: '100px'}}
           />
         </Box>
       </Box>
@@ -179,7 +177,8 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
         </Button>
       </Box>
     </Box>
-  );
+  )
+    ;
 };
 
 export default Filters;
