@@ -1,6 +1,6 @@
+import {FC, useState} from "react";
 import {Box, Card, CardContent, Typography, Pagination, Button, Rating} from '@mui/material';
 import {Hotel} from "../types/HotelTypes";
-import {FC, useState} from "react";
 
 
 interface HotelListProps {

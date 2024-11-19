@@ -1,3 +1,4 @@
+import {FC} from "react";
 import {
   Box,
   Button,
@@ -10,7 +11,6 @@ import {
   Autocomplete
 } from '@mui/material';
 import {Filter} from "../types/HotelTypes";
-import {FC} from "react";
 
 interface FiltersProps {
   filters: Filter,
@@ -36,7 +36,6 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
     {value: 'Отель', label: 'Отель'},
   ];
 
-  console.log('filters', filters)
   const handleChange = (key, value) => {
     setFilters((prev) => ({...prev, [key]: value}));
   };
