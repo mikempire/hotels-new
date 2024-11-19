@@ -70,7 +70,7 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
         isOptionEqualToValue={(option, value) => option.value === value.value}
         disableCloseOnSelect
       />
-      <Typography variant="subtitle1" sx={{marginTop: 2}}>Количество звезд</Typography>
+      <Typography variant="subtitle1" sx={{marginTop: 2, marginBottom: 1}}>Количество звезд</Typography>
       <FormGroup>
         {[1, 2, 3, 4, 5].map((star) => (
           <FormControlLabel
@@ -93,6 +93,7 @@ const Filters: FC<FiltersProps> = ({filters, setFilters, onApply, onClear}) => {
         ))}
       </FormGroup>
 
+      <Typography variant="subtitle1" sx={{marginTop: 2, marginBottom: 1}}>Количество отзывов (от)</Typography>
       <TextField
         type="number"
         value={filters.reviews}
